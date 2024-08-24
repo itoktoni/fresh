@@ -1,0 +1,36 @@
+@import "tailwind/_base.css";
+@import "tailwind/_components.css";
+@import "tailwind/_utilities.css";
+@import "colors.scss";
+
+@import "_app.css";
+@import "_navbar.css";
+@import "_aside.css";
+@import "_title-bar.css";
+@import "_button.css";
+@import "_hero.css";
+@import "_card.css";
+@import "_icon.css";
+@import "_table.css";
+@import "_progress.css";
+@import "_image.css";
+@import "_modal.css";
+@import "_notifications.css";
+@import "form/_checkbox-radio-switch.css";
+@import "form/_form.css";
+@import "_footer.css";
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 20px;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+      background: #F9FAFB;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+      background: $dark;
+    }
+}

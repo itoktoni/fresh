@@ -5,13 +5,28 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
+    <div class="container">
+
+        <div class="grid lg:grid-cols-2 gap-4">
+            <x-bladewind::input class="col-span-6" label="Full name" />
+            <x-bladewind::input label="Full name" />
+
+            <x-bladewind::select
+    name="department"
+    onselect="filterEmployees"
+    placeholder="filter by department"
+    data="manual"
+    multiple="true">
+    <x-bladewind::select-item label="Field Workers" value="field" />
+    <x-bladewind::select-item label="Finance" value="finance" />
+    <x-bladewind::select-item label="Tech" value="tech" />
+    <x-bladewind::select-item label="Marketing" value="marketing" />
+    <x-bladewind::select-item label="Operations" value="operations" />
+</x-bladewind::select>
+
         </div>
+
     </div>
+
+    <x-bladewind::button>Save User</x-bladewind::button>
 </x-app-layout>
